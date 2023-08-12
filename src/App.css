@@ -1,0 +1,212 @@
+/* body {
+  margin: 0;
+  overflow: hidden;
+} */
+
+.sky {
+  background-color: #87CEEB;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.cloud {
+  position: absolute;
+  width: 150px;
+  height: 80px;
+  background-color: white;
+  border-radius: 50px;
+  opacity: 0.7;
+  animation: cloud 10s linear infinite alternate;
+}
+.cloud2 {
+  position: absolute;
+  width: 150px;
+  height: 80px;
+  background-color: white;
+  border-radius: 50px;
+  opacity: 0.7;
+  animation: cloud2 10s linear infinite alternate;
+}
+
+.raindrop {
+  position: absolute;
+  width: 2px;
+  height: 10px;
+  background-color: blue;
+  animation: rain 0.5s linear infinite;
+}
+
+@keyframes rain {
+  to {
+    transform: translateY(100vh);
+  }
+}
+
+@keyframes cloud {
+  from {
+    left: -100px;
+  }
+  to {
+    left: 100vw;
+  }
+}
+@keyframes cloud2 {
+  from {
+    left: 100px;
+  }
+  to {
+    left: -100vw;
+  }
+}
+
+body {
+  margin: 0;
+  overflow: hidden;
+  background-color: #87CEEB;
+  animation: backgroundColorChange 8s linear infinite;
+}
+
+@keyframes backgroundColorChange {
+  0% {
+    background-color: #87CEEB; /* Start with initial background color */
+  }
+  100% {
+    background-color: #FFE0B2; /* Change to new background color as sun rises */
+  }
+}
+
+.sun {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  background-color: #FFD700;
+  border-radius: 50%;
+  top: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+  overflow: hidden;
+}
+
+.rays {
+  position: absolute;
+  width: 2px;
+  height: 40px;
+  background-color: #FFD700;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  animation: sunRays 8s linear infinite;
+  transform-origin: top;
+}
+
+.sunray-line {
+  position: absolute;
+  width: 2px;
+  height: 15%;
+  background-color: #FFD700;
+  top: 70%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.sunburst-line {
+  position: absolute;
+  width: 2px;
+  height: 25px;
+  background-color: #FFD700;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  animation: sunburst 8s linear infinite;
+}
+
+.border-line-small {
+  position: absolute;
+  width: 2px;
+  height: 20px;
+  background-color: #FFD700;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.border-line-large {
+  position: absolute;
+  width: 2px;
+  height: 40px;
+  background-color: #FFD700;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+@keyframes sunRays {
+  0% {
+    transform: translateX(-50%) translateY(-50%) scaleY(1);
+  }
+  100% {
+    transform: translateX(-50%) translateY(-50%) scaleY(0);
+  }
+}
+
+@keyframes sunburst {
+  0% {
+    transform: translateX(-50%) translateY(-50%) rotate(0deg);
+  }
+  100% {
+    transform: translateX(-50%) translateY(-50%) rotate(360deg);
+  }
+}
+
+.Conatinbox{
+  /* height: 40vh; */
+  width: 30%;
+  padding: 20px;
+  background-color: white;
+  color: black;
+  border-radius: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center ;
+  flex-direction: column;
+  position: absolute;
+  top: 60px;
+  right: 60px;
+}
+.serchbox{
+  justify-content: space-between;
+}
+.serchbox input{
+    border: 1px solid black;
+    color: black;
+    border-radius: 20px;
+    padding: 7px 0px;
+    margin-bottom: 30px;
+}
+.serchbox button{
+  background-color: #87CEEB;
+  padding: 10px 25px;
+  border-radius: 15px;
+  margin-left: 30px;
+  border: none;
+}
+.InformationSection{
+  width: 100%;
+}
+.InformationSection .SingleLine{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;  
+}
+.InformationSection .SingleLine label{
+  font-size: 18px;
+
+}
+.InformationSection .SingleLine p{
+  margin: 0;
+  font-size: 22px;
+  color: #87CEEB;
+  font-weight: 700;
+}
